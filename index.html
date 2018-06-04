@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>灵堂模拟器 p5.js版 v0.1beta</title>
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <!-- uncomment lines below to include extra p5 libraries -->
+    <script language="javascript" src="libraries/p5.dom.js"></script>
+    <script language="javascript" src="libraries/p5.sound.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+    <!-- this line removes any default padding and style. you might only need one of these values set. -->
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background: #141414;
+        }
+
+        .esu-audio {
+            position: fixed;
+            left: 50%;
+            top: 560;
+        }
+
+        .audio-player-container {
+            position: absolute;
+            width: 100%;
+            top: 600px;
+        }
+
+        .audio-player-frame {
+            position: absolute;
+            border-radius: 4px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 488px;
+            height: 20px;
+            background: #808080;
+            padding: 6px 10px 6px 10px;
+
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .audio-player-frame * {
+            display: inline-block;
+        }
+
+        .audio-player-image-button {
+            width: 20px;
+            height: 20px;
+        }
+
+        .audio-button-play-pause {
+            background: url(images/button-play.svg);
+        }
+
+        .audio-button-loop {
+            background: url(images/button-loop-off.svg);
+        }
+
+        .audio-button-mute {
+            background: url(images/button-audio-on.svg);
+        }
+
+        .audio-button-choose-song,
+        .audio-button-default-song {
+            min-height: 20px;
+            max-height: 20px;
+            min-width: 20px;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+        }
+
+        .audio-player-karaoke-button {
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-family: sans-serif;
+            font-size: 12px;
+            width: 56px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 20px;
+            text-align: center;
+        }
+
+        .audio-button-choose-song {
+            right: 6px;
+        }
+
+        .audio-button-default-song {
+            right: 68px;
+        }
+
+        .audio-player-image-button,
+        .audio-player-karaoke-button {
+            transition: transform 0.2s;
+            -moz-transition: transform 0.2s;
+            -webkit-transition: transform 0.2s;
+            -o-transition: transform 0.2s;
+            opacity: 0.8;
+        }
+
+        #LoopButton {
+            opacity: 0.3;
+        }
+
+        #MuteButton { /* Not finished yet */
+            opacity: 0.3;
+        }
+
+        #LingTangKGe { /* Not finished yet */
+            opacity: 0.3;
+        }
+
+        #DefaultSong { /* Not finished yet */
+            opacity: 0.3;
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+        <h1>TURN ON JAVASCRIPT YOU DUMBFUCK</h1>
+    </noscript>
+
+    <div class="audio-player-container">
+        <div class="audio-player-frame">
+            <div onclick="togglePlayPause()" on-tap="togglePlayPause()" id="PlayPause" class="audio-player-image-button audio-button-play-pause"></div>
+            <div onclick="toggleLoop()" on-tap="toggleLoop()" id="LoopButton" class="audio-player-image-button audio-button-loop"></div>
+            <div onclick="toggleMute()" on-tap="toggleMute()" id="MuteButton" class="audio-player-image-button audio-button-mute"></div>
+            <div onclick="" on-tap="" class="audio-button-choose-song">
+                <div class="audio-player-karaoke-button" id="LingTangKGe">灵堂K歌</div>
+            </div>
+            <div onclick="useDefaultSong()" on-tap="useDefaultSong()" class="audio-button-default-song">
+                <div class="audio-player-karaoke-button" id="DefaultSong">默认歌曲</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
