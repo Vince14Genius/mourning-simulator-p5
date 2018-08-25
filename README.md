@@ -5,5 +5,5 @@
 - Improve frame rate
 - Add functionality for the currently disabled buttons
 
-## How do I customize this simulator with other photos?
+## How do I customize this simulator using other photos?
 ***READ THE FUCKING CODE!!111***
