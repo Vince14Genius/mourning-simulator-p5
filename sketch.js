@@ -1,3 +1,14 @@
+// MARK: User Preset Strings
+
+var funeralName = "[SB_NAME]的奇妙灵堂"
+var leftColumnText = "香\n消\n玉\n殒"
+var rightColumnText = "梦\n断\n北\n堂"
+var topLeftText = "沉 痛"
+var topRightText = "悼 念"
+var creditsText = "灵堂模拟器 p5.js版 v0.1 beta, powered by Wādogēmu! Media Player"
+
+// MARK: Code
+
 var frameTimes = []
 var oldTime = 0
 var fpsCooldown = 0 // When fpsCooldown <= 0, set displayFPS = fps
@@ -278,8 +289,8 @@ function draw() {
         fill(64)
         textSize(48)
         textAlign(CENTER, TOP)
-        text("沉 痛", windowWidth / 2 - frameWidth / 2 - 90, 140)
-        text("悼 念", windowWidth / 2 + frameWidth / 2 + 90, 140)
+        text(topLeftText, windowWidth / 2 - frameWidth / 2 - 90, 140)
+        text(topRightText, windowWidth / 2 + frameWidth / 2 + 90, 140)
     
         for (gifContainer of allGifs) {
             gifContainer.update()
@@ -301,21 +312,21 @@ function draw() {
     
         stroke(255, 255, 255, 30)
         textAlign(CENTER, TOP)
-        text("[SB_NAME]的奇妙灵堂", windowWidth / 2, 40)
+        text(funeralName, windowWidth / 2, 40)
     
         noStroke()
         textSize(72)
     
         textAlign(RIGHT, TOP)
-        text("香\n消\n玉\n殒", windowWidth / 2 - 420, 180)
+        text(leftColumnText, windowWidth / 2 - 420, 180)
     
         textAlign(LEFT, TOP)
-        text("梦\n断\n北\n堂", windowWidth / 2 + 420, 180)
+        text(rightColumnText, windowWidth / 2 + 420, 180)
     
         textSize(32)
         textAlign(CENTER, TOP)
         fill(100, 0, 0)
-        text("灵堂模拟器 p5.js版 v0.1 beta, powered by Wādogēmu! Media Player", windowWidth / 2, 160 + frameHeight + 100)    
+        text(creditsText, windowWidth / 2, 160 + frameHeight + 100)    
     }
 
     if (currentSong.isPlaying()) {
