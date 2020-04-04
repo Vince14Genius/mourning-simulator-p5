@@ -1,4 +1,4 @@
-// MARK: User Preset Strings
+// MARK: User Presets
 
 var funeralName = "[SB_NAME]的奇妙灵堂"
 var leftColumnText = "香\n消\n玉\n殒"
@@ -6,6 +6,10 @@ var rightColumnText = "梦\n断\n北\n堂"
 var topLeftText = "沉 痛"
 var topRightText = "悼 念"
 var creditsText = "灵堂模拟器 p5.js版 v0.1 beta, powered by Wādogēmu! Media Player"
+
+var photosCount = 2 // Modify this integer to account for the number of portrait photos 
+                    // provided. Be sure to name your image file according to the same
+                    // format as existing portrait photo files.
 
 // MARK: Code
 
@@ -190,7 +194,7 @@ function preload() {
     gifI.static = loadImage('images/i.gif')
 
     // Images for sb.
-    for (var i = 1; i <= 2; i++) {
+    for (var i = 1; i <= photosCount; i++) {
         imagesSB.push(loadImage(`images/sb-${i}.png`))
     }
 
