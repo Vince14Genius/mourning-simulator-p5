@@ -9,4 +9,4 @@
 ***READ THE FUCKING CODE!!111***
 
 ## Credits
-模仿原『恶俗wiki』的『灵堂模拟器』制作
+模仿原『ESU wiki』的『灵堂模拟器』制作
